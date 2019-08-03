@@ -35,7 +35,7 @@
 # .PHONY:clean
 
 # CC = arm-linux-gnueabihf-gcc
-CC=arm-linux-gnueabi-gcc
+CC=gcc
 SRC = $(wildcard *.c */*.c)
 OBJS = $(patsubst %.c, %.o, $(SRC))
 DEP_FILES := $(patsubst %, .%.d,$(OBJS))
