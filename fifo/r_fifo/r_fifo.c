@@ -76,15 +76,14 @@ int main()
         exit(1);
     }
 
-    while (1)
-    {
-        memset(buff, 0, sizeof(buff));
+    memset(buff, 0, sizeof(buff));
 
-        if ((nread = read(fd, buff, MAX_BUFFER_SIZE)) > 0)
-        {
-            printf("Read '%s' from FIFO\n", buff);
-        }
+    if ((nread = read(fd, buff, MAX_BUFFER_SIZE)) > 0)
+    {
+        printf("Read '%s' from FIFO\n", buff);
     }
+
+   printf("***************** close fifo ************************\n");
 
     close(fd);
 
