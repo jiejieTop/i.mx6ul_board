@@ -35,7 +35,7 @@
  *       ENOTDIR：参数 filename 路径中的目录存在但却非真正的目录
  *       EROFS：参数 filename 指定的文件存在于只读文件系统内
  */
-
+#include <sys/wait.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
